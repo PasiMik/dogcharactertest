@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}" />
+<meta charset="ISO-8859-1">
+<title>Character test results</title>
+</head>
+<body>
+	<table class="table table-striped">
+		<tr>
+			<th><h1>Character test results</h1></th>
+			<th><h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3></th>
+			<th><form th:action="@{/logout}" method="post">
+					<input type="submit" value="Sign Out" class="btn btn-sm btn-danger" />
+				</form>
+			</th>
+		</tr>
+	</table>
+	<table class="table table-striped">
+		<tr>
+			<th style="text-align: left">Date</th>
+			<th style="text-align: left">Breed</th>
+			<th style="text-align: left">Official name</th>
+			<th style="text-align: left">Registration number</th>
+			<th style="text-align: left">Capability to function</th>
+			<th style="text-align: left">Tendency to aggressive behaviour</th>
+			<th style="text-align: left">Desire for defence</th>
+			<th style="text-align: left">Desire to fight</th>
+			<th style="text-align: left">Nerves</th>
+			<th style="text-align: left">Temperament</th>
+			<th style="text-align: left">Mental hardness</th>
+			<th style="text-align: left">Accessibility</th>
+			<th style="text-align: left">Reaction to shots</th>
+			<th style="text-align: left">Result</th>
+			<th sec:authorize="hasRole('ADMIN')"> </th>
+		</tr>
+		<tr th:each="result : ${results}">
+			<td th:text="${result.testDate}"></td>
+			<td th:text="${result.breed}"></td>
+			<td th:text="${result.dogName}"></td>
+			<td th:text="${result.regNumber}"></td>
+			<td th:text="${result.capability}"></td>
+			<td th:text="${result.aggBehaviour}"></td>
+			<td th:text="${result.defence}"></td>
+			<td th:text="${result.fight}"></td>
+			<td th:text="${result.nerves}"></td>
+			<td th:text="${result.temperament}"></td>
+			<td th:text="${result.hardness}"></td>
+			<td th:text="${result.accessibility}"></td>
+			<td th:text="${result.shotTolerance}"></td>
+			<td th:text="${result.endResult}"></td>			
+			
+		</tr>
+	</table>
+	<a href="/addbook" class="btn btn-primary">Add dog</a>
+
+</body>
+</html>
