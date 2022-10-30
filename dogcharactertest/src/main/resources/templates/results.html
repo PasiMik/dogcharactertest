@@ -35,7 +35,7 @@
 			<th style="text-align: left">Accessibility</th>
 			<th style="text-align: left">Reaction to shots</th>
 			<th style="text-align: left">Result</th>
-			<th sec:authorize="hasRole('ADMIN')"> </th>
+			
 		</tr>
 		<tr th:each="result : ${results}">
 			<td th:text="${result.testDate}"></td>
@@ -55,7 +55,7 @@
 			
 		</tr>
 	</table>
-	<a href="/addbook" class="btn btn-primary">Add dog</a>
+	<a href="/add_dog" class="btn btn-primary">Add dog</a>
 
 </body>
 </html>

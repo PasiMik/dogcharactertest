@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml"
+				xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Adding dog</title>
+</head>
+<body>
+
+<h1>Add a dog</h1>
+	<div>
+ 		<form th:object="${dog}" th:action="@{save}" action="#" method="post"> 
+ 				<label for="testdate">Date:</label>
+ 				<input type="text" id="testdate" th:field="*{testDate}" /></br>
+ 				<label for="breed">Breed:</label>
+ 				<input type="text" id="breed" th:field="*{breed}" /></br>
+ 				<label for="dogname">Official name:</label>
+ 				<input type="text" id = "dogname" th:field="*{dogName}" /></br>
+ 				<label for="regnumber">Registration number:</label>
+ 				<input type="text" id = "regnumber" th:field="*{regNumber}" /></br>
+ 				<label for="capability">Capability to function:</label>
+ 				<input type="text" id = "capability" th:field="*{capability}" /></br>
+ 				<label for="aggbehaviour">Tendency to aggressive behaviour:</label>
+ 				<input type="text" id = "aggbehaviour" th:field="*{aggBehaviour}" /></br>
+ 				<label for="defence">Desire for defence:</label>
+ 				<input type="text" id = "defence" th:field="*{defence}" /></br>
+ 				<label for="fight">Desire to fight:</label>
+ 				<input type="text" id = "fight" th:field="*{fight}" /></br>
+ 				<label for="nerves">Nerves:</label>
+ 				<input type="text" id = "nerves" th:field="*{nerves}" /></br>
+ 				<label for="temperament">Temperament:</label>
+				<input type="text" id = "temperament" th:field="*{temperament}" /></br>
+ 				<label for="hardness">Mental hardness:</label>
+				<input type="text" id = "hardness" th:field="*{hardness}" /></br>
+ 				<label for="accessibility">Accessibility:</label>
+ 				<input type="text" id = "accessibility" th:field="*{accessibility}" /></br>
+ 				<label for="shottolerance">Reaction to shots:</label>
+ 				<input type="text" id = "shottolerance" th:field="*{shotTolerance}" /></br>
+ 				<label for="endresult">Result:</label>
+ 				<input type="text" id = "endresult" th:field="*{endResult}" /></br> 
+ 				<input type="submit" value="Save"></input>
+ 			</form>
+		</div>
+	</body>
+</html>
