@@ -52,7 +52,8 @@
 			<td th:text="${result.accessibility}"></td>
 			<td th:text="${result.shotTolerance}"></td>
 			<td th:text="${result.endResult}"></td>			
-			
+			<td><a th:href="@{/delete/{id}(id=${result.id})}" class="btn btn-danger">Delete</a></td>
+			<td><a th:href="@{/editdog/{id}(id=${result.id})}" class="btn btn-danger">Edit</a></td>
 		</tr>
 	</table>
 	<a href="/add_dog" class="btn btn-primary">Add dog</a>
