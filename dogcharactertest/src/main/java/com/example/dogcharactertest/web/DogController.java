@@ -1,6 +1,7 @@
 package com.example.dogcharactertest.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +30,7 @@ public class DogController {
 		return "results";
 	}
 	
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/add_dog")
 	public String addDog(Model model){
 		model.addAttribute("dog", new Dog());
@@ -41,12 +43,14 @@ public class DogController {
 		return "redirect:testresults";
 	}
 	
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/delete/{id}")
 	public String deleteDog(@PathVariable("id") long id, Model model) {
 	repository.deleteById(id);
 	return "redirect:../testresults";
 	}
 	
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/editdog/{id}")
 	public String edit(@PathVariable("id") long id, Model model){
 		model.addAttribute("dog", repository.findById(id));
