@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.dogcharactertest.domain.Dog;
 import com.example.dogcharactertest.domain.DogRepository;
@@ -15,8 +16,13 @@ import com.example.dogcharactertest.domain.DogRepository;
 @Controller
 public class DogController {
 	@Autowired
-	private DogRepository repository; 
+	private DogRepository repository;
 	
+	@RequestMapping(value="/login")
+	public String login() {
+		return "login";
+	}
+		
 	@GetMapping("/testresults")
 	public String testresults(Model model) {
 		model.addAttribute("results", repository.findAll());
