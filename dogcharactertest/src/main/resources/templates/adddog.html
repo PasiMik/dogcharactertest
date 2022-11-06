@@ -3,43 +3,47 @@
 				xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="/css/form.css" th:href="@{/css/form.css}" />
 <title>Adding dog</title>
 </head>
 <body>
-
-<h1>Add a dog</h1>
-	<div>
- 		<form th:object="${dog}" th:action="@{save}" action="#" method="post"> 
- 				<label for="testdate">Date:</label>
+	<div class = "row">
+	<div class = "column"></div>
+	<div class = "column" id = "form">
+		<h1>Save a dog </h1>
+ 		<form class ="save" th:object="${dog}" th:action="@{/save}" action="#" method="post">  
+ 				<label for="testdate">Date</label></br>
  				<input type="text" id="testdate" th:field="*{testDate}" /></br>
- 				<label for="breed">Breed:</label>
+ 				<label for="breed">Breed</label></br>
  				<input type="text" id="breed" th:field="*{breed}" /></br>
- 				<label for="dogname">Official name:</label>
+ 				<label for="dogname">Official name</label></br>
  				<input type="text" id = "dogname" th:field="*{dogName}" /></br>
- 				<label for="regnumber">Registration number:</label>
+ 				<label for="regnumber">Registration number</label></br>
  				<input type="text" id = "regnumber" th:field="*{regNumber}" /></br>
- 				<label for="capability">Capability to function:</label>
+ 				<label for="capability">Capability to function</label></br>
  				<input type="text" id = "capability" th:field="*{capability}" /></br>
- 				<label for="aggbehaviour">Tendency to aggressive behaviour:</label>
+ 				<label for="aggbehaviour">Tendency to aggressive behaviour</label></br>
  				<input type="text" id = "aggbehaviour" th:field="*{aggBehaviour}" /></br>
- 				<label for="defence">Desire for defence:</label>
+ 				<label for="defence">Desire for defence</label></br>
  				<input type="text" id = "defence" th:field="*{defence}" /></br>
- 				<label for="fight">Desire to fight:</label>
+ 				<label for="fight">Desire to fight</label></br>
  				<input type="text" id = "fight" th:field="*{fight}" /></br>
- 				<label for="nerves">Nerves:</label>
+ 				<label for="nerves">Nerves</label></br>
  				<input type="text" id = "nerves" th:field="*{nerves}" /></br>
- 				<label for="temperament">Temperament:</label>
+ 				<label for="temperament">Temperament</label></br>
 				<input type="text" id = "temperament" th:field="*{temperament}" /></br>
- 				<label for="hardness">Mental hardness:</label>
+ 				<label for="hardness">Mental hardness</label></br>
 				<input type="text" id = "hardness" th:field="*{hardness}" /></br>
- 				<label for="accessibility">Accessibility:</label>
+ 				<label for="accessibility">Accessibility</label></br>
  				<input type="text" id = "accessibility" th:field="*{accessibility}" /></br>
- 				<label for="shottolerance">Reaction to shots:</label>
+ 				<label for="shottolerance">Reaction to shots</label></br>
  				<input type="text" id = "shottolerance" th:field="*{shotTolerance}" /></br>
- 				<label for="endresult">Result:</label>
+ 				<label for="endresult">Result</label></br>
  				<input type="text" id = "endresult" th:field="*{endResult}" /></br> 
  				<input type="submit" value="Save"></input>
  			</form>
+		</div>
+		<div class = "column"></div>
 		</div>
 	</body>
 </html>

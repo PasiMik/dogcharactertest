@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+	background-image:url("/image/Jetro_head_black.jpg");
+	
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px; 
+  
+
+}
+
+#form {
+	border-radius: 5px;
+ 	background-color: #E5E4E2;
+  	padding: 20px;
+}
+
+input {
+	width: 100%;
+	padding: 10px 15px;
+	margin: 8px 5px;
+	box-sizing: border-box;
+	border: 2px solid grey;
+  	border-radius: 4px;
+}
+
+.save > input[type=submit]{
+	font-weight: bold;
+	background-color: #0BDA51;
+	border:none;
+}
+
+.save > input[type=submit]:hover{
+	background-color: #00A36C;
+}
+
+input[type=submit]:hover{
+	background-color: #1434A4;
+}
