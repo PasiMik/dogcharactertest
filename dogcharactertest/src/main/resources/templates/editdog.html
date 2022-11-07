@@ -11,6 +11,7 @@
 	<div class = "column"></div>
 	<div class = "column" id = "form">
 		<h1>Edit the dog </h1>
+		<div class="button"><a th:href="@{/testresults}"><button>Cancel</button></a></div>
  		<form class = "save" th:object="${dog}" th:action="@{../save}" action="#" method="post">
  				<input type="hidden" th:field="*{id}" class="form-control"/>  
  				<label for="testdate">Date</label></br>

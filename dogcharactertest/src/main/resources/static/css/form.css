@@ -40,6 +40,22 @@ input {
 	background-color: #00A36C;
 }
 
+button{
+	background-color: #EC5800;
+	border-radius: 4px;
+	border: 2px solid #EC5800;
+	position: right;
+}
+button:hover{
+	background-color: #FF2400;
+	border-radius: 4px;
+	border: 2px solid #FF2400;
+}
+
+.button{
+	text-align:right;
+}
+
 input[type=submit]:hover{
 	background-color: #1434A4;
 }
