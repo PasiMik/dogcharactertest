@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}" />
+<meta charset="ISO-8859-1">
+<title>Character test result explanation</title>
+</head>
+<body>	
+	<table class="table table-striped">
+		<tr>
+			<th style="text-align: left">Tested feature</th>
+			<th style="text-align: left">Grade</th>
+			<th style="text-align: left">Multiplier</th>	
+		</tr>
+		<tr>
+			<td>I Capability to function</td>
+			<td>+3 Extremely high</br>+2 High</br>+1 Moderate</br>-1 Low</br>-2 Inadequate</br>-3 Unable to function </td>
+			<td>x15</td>			
+		</tr>
+		<tr>
+			<td>II Tendency to aggressive behaviour</td>
+			<td>+3 moderate without post-attack aggressiveness</br>+2 High without post-attack aggressiveness</br>+1 Low without post-attack aggressiveness</br>-1 Low with post-attack aggressiveness</br>-2 Moderate with post-attack aggressiveness</br>-3 High with post-attack aggressiveness</td>
+			<td>x1</td>			
+		</tr>
+		<tr>
+			<td>III Desire for defence</td>
+			<td>+3 Moderate, controlled</br>+2 High, controlled</br>+1 Low</br>-1 Reluctant</br>-2 Extremely high</br>-3 Uncontrollable </td>
+			<td>x1</td>			
+		</tr>
+		<tr>
+			<td>IV Desire to fight</td>
+			<td>+3 high</br>+2 Moderate</br>+1 Extremely high</br>-1 Low</br>-2 Inadequate</br>-3 Reluctant</td>
+			<td>x10</td>			
+		</tr>
+		<tr>
+			<td>V Nerves</td>
+			<td>+3 Calm and firm</br>+2 Moderately calm</br>+1 Tendency to nervouseness</br>-1 Slightly nervous</br>-2 Nervous</br>-3 Highly nervous</td>
+			<td>x35</td>			
+		</tr>
+		<tr>
+			<td>VI Temperament</td>
+			<td>+3 High</br>+2 Moderate</br>+1 Extremely high</br>-1a Disturbingly high</br>-1b Slightly negligent</br>-1c Impulsive</br>-2 Negligent</br>-3 Aphatetic</td>
+			<td>x15</td>			
+		</tr>
+		<tr>
+			<td>VII Mental hardness</td>
+			<td>+3 Moderate</br>+2 Hard</br>+1 Tendency to softness</br>-1 Extremely hard</br>-2 Soft</br>-3 Extremely soft</td>
+			<td>x8</td>			
+		</tr>
+		<tr>
+			<td>VIII Accessibility</td>
+			<td>+3 Kind, accessible, open</br>+2a Accessible, slightly reserved</br>+2b Accessible, tendency to reserved behaviour</br>+1 Flattering</br>-1 Not accessible, reserved</br>-2 Aggressive</br>-3 Insidious</td>
+			<td>x15</td>			
+		</tr>
+		<tr>
+			<td>Reaction to shots</td>
+			<td>+++ Secure to shots</br>++ Unfamiliar with shots</br>+ Irritable while shooting</br>- Disposed to shots</br>-- Fearful of shots</td>
+			<td></td>			
+		</tr>
+		<tr>
+			<td>Total score</td>
+			<td>High, over +225</br>Good, +151 - +225</br>Moderate, +76 - +150</br>Low, 0 - +75</br>Inadequate, 0 - -75</br>Unable to function, below -75</td>
+			<td></td>			
+		</tr>
+		
+	</table>
+	
+
+</body>
+</html>

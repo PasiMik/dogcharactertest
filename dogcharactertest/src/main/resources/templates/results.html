@@ -3,12 +3,13 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
-<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
+ <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
 	th:href="@{/css/bootstrap.min.css}" />
 <meta charset="ISO-8859-1">
 <title>Character test results</title>
 </head>
 <body>
+
 	<table class="table table-striped">
 		<tr>
 			<th><h1>Character test results</h1></th>
@@ -19,26 +20,30 @@
 			</th>
 		</tr>
 	</table>
-	<table class="table table-striped">
+	
+	
+	<table class="table table-striped table-bordered" id ="result-table">
 		<tr>
 			<th style="text-align: left">Date</th>
 			<th style="text-align: left">Breed</th>
 			<th style="text-align: left">Official name</th>
 			<th style="text-align: left">Registration number</th>
-			<th style="text-align: left">Capability to function</th>
-			<th style="text-align: left">Tendency to aggressive behaviour</th>
-			<th style="text-align: left">Desire for defence</th>
-			<th style="text-align: left">Desire to fight</th>
-			<th style="text-align: left">Nerves</th>
-			<th style="text-align: left">Temperament</th>
-			<th style="text-align: left">Mental hardness</th>
-			<th style="text-align: left">Accessibility</th>
+			<th style="text-align: left">I Capability to function</th>
+			<th style="text-align: left">II Tendency to aggressive behaviour</th>
+			<th style="text-align: left">III Desire for defence</th>
+			<th style="text-align: left">IV Desire to fight</th>
+			<th style="text-align: left">V Nerves</th>
+			<th style="text-align: left">VI Temperament</th>
+			<th style="text-align: left">VII Mental hardness</th>
+			<th style="text-align: left">VIII Accessibility</th>
 			<th style="text-align: left">Reaction to shots</th>
 			<th style="text-align: left">Result</th>
+			<th style="text-align: left"></th>
+			<th style="text-align: left"><a target="_blank" th:href="@{/explanation}">Explanation</a></th>
 			
 		</tr>
 		<tr th:each="result : ${results}">
-			<td th:text="${result.testDate}"></td>
+			<td th:text="${#dates.format(result.testDate, 'dd.MM.yyyy')}"></td>
 			<td th:text="${result.breed}"></td>
 			<td th:text="${result.dogName}"></td>
 			<td th:text="${result.regNumber}"></td>
@@ -55,8 +60,7 @@
 			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/delete/{id}(id=${result.id})}" class="btn btn-danger">Delete</a></td>
 			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/editdog/{id}(id=${result.id})}" class="btn btn-danger">Edit</a></td>
 		</tr>
-	</table>
+	</table>	
 	<a sec:authorize="hasAuthority('ADMIN')" href="/add_dog" class="btn btn-primary">Add dog</a>
-
 </body>
 </html>

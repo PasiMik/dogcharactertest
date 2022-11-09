@@ -1,16 +1,28 @@
 package com.example.dogcharactertest.domain;
 
+
+
+
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+
 
 @Entity
 public class Dog {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	private String testDate;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date testDate;
+	
 	private String breed;
 	private String dogName;
 	private String regNumber;
@@ -27,7 +39,7 @@ public class Dog {
 	
 	public Dog() {}
 
-	public Dog(String testDate, String breed, String dogName, String regNumber, String capability, String aggBehaviour,
+	public Dog(Date testDate, String breed, String dogName, String regNumber, String capability, String aggBehaviour,
 			String defence, String fight, String nerves, String temperament, String hardness, String accessibility,
 			String shotTolerance, int endResult) {
 		this.testDate = testDate;
@@ -56,11 +68,12 @@ public class Dog {
 		this.id = id;
 	}
 
-	public String getTestDate() {
+	public Date getTestDate() {
 		return testDate;
+		
 	}
 
-	public void setTestDate(String testDate) {
+	public void setTestDate(Date testDate) {
 		this.testDate = testDate;
 	}
 

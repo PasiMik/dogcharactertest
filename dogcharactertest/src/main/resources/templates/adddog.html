@@ -14,7 +14,7 @@
 		<div class="button"><a th:href="@{/testresults}"><button>Cancel</button></a></div>
  		<form class ="save" th:object="${dog}" th:action="@{/save}" action="#" method="post">  
  				<label for="testdate">Date</label></br>
- 				<input type="text" id="testdate" th:field="*{testDate}" /></br>
+ 				<input type="date" placeholder ="dd.mm.yyyy" id="testdate" th:field="*{testDate}" /></br>
  				<label for="breed">Breed</label></br>
  				<input type="text" id="breed" th:field="*{breed}" /></br>
  				<label for="dogname">Official name</label></br>

@@ -23,6 +23,11 @@ public class DogController {
 	public String login() {
 		return "login";
 	}
+	
+	@GetMapping("/explanation")
+	public String explanation() {
+		return "explanation";
+	}
 		
 	@GetMapping("/testresults")
 	public String testresults(Model model) {

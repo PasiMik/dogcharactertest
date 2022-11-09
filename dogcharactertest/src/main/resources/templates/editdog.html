@@ -15,7 +15,7 @@
  		<form class = "save" th:object="${dog}" th:action="@{../save}" action="#" method="post">
  				<input type="hidden" th:field="*{id}" class="form-control"/>  
  				<label for="testdate">Date</label></br>
- 				<input type="text" id="testdate" th:field="*{testDate}" /></br>
+ 				<input type="date" id="testdate" th:field="*{testDate}" /></br>
  				<label for="breed">Breed</label></br>
  				<input type="text" id="breed" th:field="*{breed}" /></br>
  				<label for="dogname">Official name</label></br>
