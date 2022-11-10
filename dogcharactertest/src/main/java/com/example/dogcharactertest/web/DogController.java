@@ -35,6 +35,7 @@ public class DogController {
 		return "results";
 	}
 	
+	
 	@PreAuthorize("hasAuthority('ADMIN')")
 	@GetMapping("/add_dog")
 	public String addDog(Model model){
