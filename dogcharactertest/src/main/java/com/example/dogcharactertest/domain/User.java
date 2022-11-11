@@ -2,6 +2,8 @@ package com.example.dogcharactertest.domain;
 
 import javax.persistence.*;
 
+/*Entity containing user name, password and role*/
+
 @Entity
 @Table(name="usertable")
 public class User {

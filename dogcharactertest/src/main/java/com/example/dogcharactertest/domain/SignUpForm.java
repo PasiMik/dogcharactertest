@@ -3,6 +3,8 @@ package com.example.dogcharactertest.domain;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+/* class for user signup*/
+
 public class SignUpForm {
 	 @NotEmpty
 	    @Size(min=5, max=30)

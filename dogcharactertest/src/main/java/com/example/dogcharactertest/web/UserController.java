@@ -22,13 +22,13 @@ public class UserController {
 	@Autowired
 	private UserRepository repository;
 	
-	 @RequestMapping(value = "signup")
+	 @RequestMapping(value = "signup")// creating a new user  
 	    public String addUser(Model model){
 	    	model.addAttribute("signupform", new SignUpForm());
 	        return "signup";
 	    }	
 	 
-	 @RequestMapping(value = "saveuser", method = RequestMethod.POST)
+	 @RequestMapping(value = "saveuser", method = RequestMethod.POST)//saving user if the user doesn't already exist
 	    public String save(@Valid @ModelAttribute("signupform") SignUpForm signUpForm, BindingResult bindingResult) {
 	    	if (!bindingResult.hasErrors()) { 
 	    		if (signUpForm.getPassword().equals(signUpForm.getPasswordCheck())) { 		

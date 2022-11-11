@@ -8,25 +8,23 @@
 	href="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.css"/>
 <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
 	th:href="@{/css/bootstrap.min.css}" />
-<link type="text/css" rel="stylesheet" href="/css/tablemargin.css" th:href="@{/css/tablemargin.css}" />
+<link type="text/css" rel="stylesheet" href="/css/results.css" th:href="@{/css/results.css}" />
 <meta charset="ISO-8859-1">
 <title>Character test results</title>
 </head>
 <body>
-<div class = "tablemargin1">
-	<table class="table table-striped">
-		<tr>
-			<th><h1>Character test results</h1></th>
-			<th><h3 style = "text-align:center" th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3></th>
-			<th style = "text-align:right"><form th:action="@{/logout}" method="post">
-					<input type="submit" value="Sign Out" class="btn btn-sm btn-danger" />
-				</form>
-			</th>
-			<th style = "text-align:right"><a target="_blank" th:href="@{/explanation}">Explanation on grading the tested feature</a></th>
-		</tr>
-	</table>
+<div class = "grid-container">
+	<div class="item1"><h1>Character test results</h1></div>
+	<div class="item2">
+		<h3 style = "text-align:center" th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
 	</div>
-	<div class = "tablemargin2">
+	<div class="item3">		
+			<form th:action="@{/logout}" method="post">
+					<input id="signout-button" type="submit" value="Sign Out" class="btn btn-sm btn-danger" />
+				</form>	
+			<div id="link"><a target="_blank" th:href="@{/explanation}">Explanation on grading the tested feature</a></div>
+	</div>
+	<div class="item4">	
 	<table class="table table-striped table-bordered" id ="result-table">
 		<thead>
 		<tr>
@@ -64,12 +62,13 @@
 			<td th:text="${result.accessibility}"></td>
 			<td th:text="${result.shotTolerance}"></td>
 			<td th:text="${result.endResult}"></td>			
-			<td sec:authorize="hasAuthority('ADMIN')"><a id="buttons" th:href="@{/delete/{id}(id=${result.id})}" class="btn btn-danger">Delete</a><a id="buttons" th:href="@{/editdog/{id}(id=${result.id})}" class="btn btn-danger">Edit</a></td>
+			<td sec:authorize="hasAuthority('ADMIN')"><a id="delete-button" th:href="@{/delete/{id}(id=${result.id})}" class="btn btn-danger">Delete</a><a id="edit-button" th:href="@{/editdog/{id}(id=${result.id})}" class="btn btn-danger">Edit</a></td>
 			
 		</tr>
 		</tbody>
-	</table>	
-	<a sec:authorize="hasAuthority('ADMIN')" href="/add_dog" class="btn btn-primary">Add dog</a>
+	</table>
+	</div>	
+	<div class ="item5"><a id="add-button" sec:authorize="hasAuthority('ADMIN')" href="/add_dog" class="btn btn-primary">Add dog</a></div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.js"></script>

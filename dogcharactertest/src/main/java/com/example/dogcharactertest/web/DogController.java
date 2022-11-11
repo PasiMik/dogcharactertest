@@ -19,44 +19,44 @@ public class DogController {
 	@Autowired
 	private DogRepository repository;
 	
-	@RequestMapping(value="/login")
+	@RequestMapping(value="/login")//For login 
 	public String login() {
 		return "login";
 	}
 	
-	@GetMapping("/explanation")
+	@GetMapping("/explanation")//For explanation
 	public String explanation() {
 		return "explanation";
 	}
 		
-	@GetMapping("/testresults")
+	@GetMapping("/testresults")//For showing all the test results
 	public String testresults(Model model) {
 		model.addAttribute("results", repository.findAll());
 		return "results";
 	}
 	
 	
-	@PreAuthorize("hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")//For admin user to add a new dog
 	@GetMapping("/add_dog")
 	public String addDog(Model model){
 		model.addAttribute("dog", new Dog());
 		return "adddog";
 	}
 	
-	@PostMapping("/save")
+	@PostMapping("/save")//For saving a dog
 	public String save(Dog dog) {
 		repository.save(dog);
 		return "redirect:testresults";
 	}
 	
-	@PreAuthorize("hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")//For admin user deleting a dog
 	@GetMapping("/delete/{id}")
 	public String deleteDog(@PathVariable("id") long id, Model model) {
 	repository.deleteById(id);
 	return "redirect:../testresults";
 	}
 	
-	@PreAuthorize("hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN')")//For editing a dog
 	@GetMapping("/editdog/{id}")
 	public String edit(@PathVariable("id") long id, Model model){
 		model.addAttribute("dog", repository.findById(id));

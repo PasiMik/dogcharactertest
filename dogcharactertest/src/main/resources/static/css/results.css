@@ -1,0 +1,54 @@
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'item1 item2 item3 item3'
+    'item4 item4 item4 item4'
+    'item5 item5 item5 item5 ';
+  gap: 10px;  
+  padding: 10px;
+}
+
+body{
+	background-color:#FBFCFC;
+}
+
+#link{
+	text-align:right;
+}
+
+#delete-buttons{
+	margin:0.5em;
+}
+
+#edit-button{
+	margin:0.5em;
+	background-color: #FF7F50;
+	border: #FF7F50;
+}
+#edit-button:hover{
+	background-color: #EC5800;
+	}
+
+#add-button{
+	background-color: #4CBB17;
+	border: #4CBB17;
+}
+#add-button:hover{
+	background-color: #2AAA8A;
+	}
+	
+#signout-button{
+	background-color: #C0C0C0;
+	border: #4CBB17;
+	color:black;
+}
+#signout-button:hover{
+	background-color: #848884;
+	}		

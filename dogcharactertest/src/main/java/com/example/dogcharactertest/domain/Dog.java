@@ -11,7 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.format.annotation.DateTimeFormat;
-
+/*Entity created for dog containing needed information about the dog and the test results*/
 
 
 @Entity
