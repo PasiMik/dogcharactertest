@@ -34,8 +34,8 @@ public class DogcharactertestApplication {
 			repository.save(new Dog(testDate,"Australian shepherd","Frost Lake's Future","FI12345/22","+2","+2","-1","+1","+1","+1","+1","+3","+++",142));
 			repository.save(new Dog(newDate,"Australian shepherd","Frost Lake's Past","FI45645/22","+1","+1","-1","+2","+2","+1","+1","+3","+++",146));
 			
-			User user1 = new User("user", "$2a$10$aeYF.z4171UTtrGFvh/9aOOkk0VPj8Sq0CFRYzMSpuMTyBX8SfRnm", "USER");
-			User user2 = new User("admin", "$2a$10$GQOA2HC5rJ0HjARfGcqZUufFdluGJ4sSOR6Z6eC2swOlN47I74nGW", "ADMIN");
+			User user1 = new User("user", "$2a$10$KWLQQNo/wwLYRik.MUUoI.g3u7yYJtWRHjAIGi.yDMWIfmgcEjiSq", "USER");
+			User user2 = new User("admin", "$2a$10$Ks30pQaR1A9QS/4mytTSAuLZA0NHQ2iKkHPUYlxEeaArFtTo.0g52", "ADMIN");
 			//urepository.save(user1);
 			//urepository.save(user2);
 		};
