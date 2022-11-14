@@ -33,6 +33,10 @@ public class DogcharactertestApplication {
 			
 			repository.save(new Dog(testDate,"Australian shepherd","Frost Lake's Future","FI12345/22","+2","+2","-1","+1","+1","+1","+1","+3","+++",142));
 			repository.save(new Dog(newDate,"Australian shepherd","Frost Lake's Past","FI45645/22","+1","+1","-1","+2","+2","+1","+1","+3","+++",146));
+			repository.save(new Dog(testDate,"Australian shepherd","Emphatica's Soraya","FI17946/19","+1","+1","+1","+2","+2","+2","+1","+3","+++",190));
+			repository.save(new Dog(newDate,"Australian shepherd","Golden Oldie's Earth Angel","FI29769/17","+2","+1","+3","+2","+1","+3","+1","+3","+++",187));
+			repository.save(new Dog(testDate,"Australian shepherd","Marbleshore Harlequin","FI14089/20","-1","+1","-1","-2","+1","+2","+1","+3","++",83));
+			repository.save(new Dog(newDate,"Australian shepherd","Shadow Valley Aussies Fire On Ice","FI14088/20","-1","+1","+1","-1","+1","+1","+1","+3","++",80));
 			
 			User user1 = new User("user", "$2a$10$KWLQQNo/wwLYRik.MUUoI.g3u7yYJtWRHjAIGi.yDMWIfmgcEjiSq", "USER");
 			User user2 = new User("admin", "$2a$10$Ks30pQaR1A9QS/4mytTSAuLZA0NHQ2iKkHPUYlxEeaArFtTo.0g52", "ADMIN");
