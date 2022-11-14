@@ -36,8 +36,8 @@ public class DogcharactertestApplication {
 			
 			User user1 = new User("user", "$2a$10$KWLQQNo/wwLYRik.MUUoI.g3u7yYJtWRHjAIGi.yDMWIfmgcEjiSq", "USER");
 			User user2 = new User("admin", "$2a$10$Ks30pQaR1A9QS/4mytTSAuLZA0NHQ2iKkHPUYlxEeaArFtTo.0g52", "ADMIN");
-			urepository.save(user1);
-			urepository.save(user2);
+			//urepository.save(user1);
+			//urepository.save(user2);
 		};
 		
 	}
